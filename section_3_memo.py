@@ -165,13 +165,13 @@ for x in a:
 #             cnt+=1
 # print(cnt)
 
-# insert(a, b)는 리스트의 a번째 위치에 b를 삽입하는 함수
+insert(a, b)는 리스트의 a번째 위치에 b를 삽입하는 함수
 >>> a = [1, 2, 3]
 >>> a.insert(0, 4)
 >>> a
 [4, 1, 2, 3]
 
-# append(x)는 리스트의 맨 마지막에 x를 추가하는 함수
+append(x)는 리스트의 맨 마지막에 x를 추가하는 함수
 >>> a = [1, 2, 3]
 >>> a.append(4)
 >>> a

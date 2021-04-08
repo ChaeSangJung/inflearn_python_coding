@@ -51,52 +51,53 @@ for idx, x in enumerate(a):
             score=x
             res=idx+1
 print(ave, res)
-# enumerate
-# 리스트가 있는 경우 순서와 리스트의 값을 전달하는 기능을 가집니다.
-# 이 함수는 순서가 있는 자료형(list, set, tuple, dictionary, string)을 입력으로 받아 인덱스 값을 포함하는 enumerate 객체를 리턴합니다.
 
-# data = enumerate((1, 2, 3))
-# print(data, type(data))
-# 0 : 1
-# 1 : 2
-# 2 : 3
+enumerate
+리스트가 있는 경우 순서와 리스트의 값을 전달하는 기능을 가집니다.
+이 함수는 순서가 있는 자료형(list, set, tuple, dictionary, string)을 입력으로 받아 인덱스 값을 포함하는 enumerate 객체를 리턴합니다.
 
-# for i, value in data:
-#     print(i, ":", value)
-# print()
-# 0 : 1
-# 1 : 2
-# 2 : 3
+data = enumerate((1, 2, 3))
+print(data, type(data))
+0 : 1
+1 : 2
+2 : 3
 
-# dict1 = {'이름': '한사람', '나이': 33}
-# data = enumerate(dict1)
-# for i, key in data:
-#     print(i, ":", key, dict1[key])
-# print()
-# 0 : 이름 한사람
-# 1 : 나이 33
+for i, value in data:
+    print(i, ":", value)
+print()
+0 : 1
+1 : 2
+2 : 3
 
-# data = enumerate("재미있는 파이썬")
-# for i, value in data:
-#     print(i, ":", value)
-# print()
-# 0 : 재
-# 1 : 미
-# 2 : 있
-# 3 : 는
-# 4 :  
-# 5 : 파
-# 6 : 이
-# 7 : 썬
-# range([strat,] stop [,step])
+dict1 = {'이름': '한사람', '나이': 33}
+data = enumerate(dict1)
+for i, key in data:
+    print(i, ":", key, dict1[key])
+print()
+0 : 이름 한사람
+1 : 나이 33
+
+data = enumerate("재미있는 파이썬")
+for i, value in data:
+    print(i, ":", value)
+print()
+0 : 재
+1 : 미
+2 : 있
+3 : 는
+4 :  
+5 : 파
+6 : 이
+7 : 썬
+range([strat,] stop [,step])
 
 # 5. 정다면체
 n=4
 m=6
 # cnt는 횟수를 구해 넣는 list
 cnt=[0]*(n+m+3)
-# 1 2 3 4 5 6 7 8 9 10 11 12 13
-# 0 0 0 0 0 0 0 0 0  0  0  0  0 
+# 0 1 2 3 4 5 6 7 8 9 10 11 12
+# 0 0 0 0 0 0 0 0 0 0  0  0  0 
 max=0
 for i in range(1, n+1):  
   for j in range(1, m+1):
@@ -173,11 +174,11 @@ def reverse(x):
 # map은 원본 리스트를 변경하지 않고 새 리스트를 생성
 # list(map(함수, 리스트))
 # tuple(map(함수, 튜플))
-a = [1.2, 2.5, 3.7, 4.6]
-a = list(map(int, a))
-# [1, 2, 3, 4]
-b = list(map(str, range(10)))
-# ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+>>> a = [1.2, 2.5, 3.7, 4.6]
+>>> a = list(map(int, a))
+[1, 2, 3, 4]
+>>> b = list(map(str, range(10)))
+['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 # ie..
 # +	더하기	a + b = 30
