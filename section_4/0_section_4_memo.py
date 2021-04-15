@@ -184,6 +184,7 @@ body=[(172, 67),(183, 65),(180, 70),(170, 72),(181, 60)]
 
 body.sort(reverse=True)
 # body.sort(key=lambda x: x[0], reverse=True)
+# [(183, 65), (181, 60), (180, 70), (172, 67), (170, 72)]
 largest=0
 cnt=0
 for x, y in body:
