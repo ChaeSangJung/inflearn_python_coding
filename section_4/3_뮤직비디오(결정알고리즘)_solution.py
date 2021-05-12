@@ -1,3 +1,46 @@
+n=9
+m=3
+Music= [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+def Count(capacity):
+    cnt=1
+    sum=0
+    for x in Music:
+        if sum+x>capacity:
+            cnt+=1
+            sum=x
+        else:
+            sum+=x
+    return cnt
+
+# n, m=map(int, input().split())
+# Music=list(map(int, input().split()))
+maxx=max(Music)
+lt=1
+rt=sum(Music)
+res=0
+while lt<=rt:
+    mid=(lt+rt)//2
+    if mid>=maxx and Count(mid)<=m:
+        res=mid
+        rt=mid-1
+    else:
+        lt=mid+1
+print(res)
+
+maxx=max(Music)
+lt=maxx
+rt=sum(Music)
+res=0
+while lt<=rt:
+    mid=(lt+rt)//2
+    if mid>=maxx and Count(mid)<=m:
+        res=mid
+        rt=mid-1
+    else:
+        lt=mid+1
+print(res)
+
 maxx = 9 # dvd에 노래를 잘라서 담을 수 없기에 최소 길이는 노래 중에서 제일 긴 걸로 정한다.
 lt=maxx 9 
 rt=sum(Music) 45

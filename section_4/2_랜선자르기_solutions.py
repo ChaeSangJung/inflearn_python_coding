@@ -1,5 +1,38 @@
 # 2. 랜선자르기
 
+def Count(len):
+    cnt=0
+    for x in Line:
+        cnt+=(x//len)
+    return cnt
+
+k, n=map(int, input().split())
+Line=[]
+res=0
+largest=0
+
+for i in range(k):
+    tmp=int(input())
+    Line.append(tmp)
+    largest=max(largest, tmp)
+
+# k=4
+# n=20
+# Line=[802, 743, 457, 539]
+# res=0
+# largest=802
+
+lt=1
+rt=largest
+while lt<=rt:
+    mid=(lt+rt)//2
+    if Count(mid)>=n:
+        res=mid
+        lt=mid+1
+    else:
+        rt=mid-1
+print(res)
+
 lt 1 rt 802
 
 while lt 1<=rt 802:
