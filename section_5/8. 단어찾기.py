@@ -1,11 +1,36 @@
-# 6. 응급실(큐)
-# 강의 들을 것!
+n = 5
+word = ['big', 'good', 'sky', 'blue', 'mouse', 'sky', 'good', 'mouse', 'big']
+p=dict()
 
-# 7. 교육과정설계(큐)
-# 강의 들을 것!
+for i in range(n):
+  p[word[i]] = 1
 
-# 8. 단어찾기
-# 강의 들을 것!
+for j in range(n,len(word)):
+  p[word[j]] = 0
+
+for key, val in p.items():
+  if val == 1:
+    print(key)
+    break
+
+
+import sys
+sys.stdin=open("input.txt", "r")
+n=int(input())
+p=dict()
+for i in range(n):
+    word=input()
+    p[word]=1
+for i in range(n-1):
+    word=input()
+    p[word]=0
+for key, val in p.items():
+    if val==1:
+        print(key)
+        break
+
+
+
 딕셔너리(https://wikidocs.net/16)
 1. 기본 딕셔너리의 모습
 {Key1:Value1, Key2:Value2, Key3:Value3, ...}
@@ -60,15 +85,3 @@ clear 함수는 딕셔너리 안의 모든 요소를 삭제한다. 빈 리스트
 True
 >>> 'email' in a
 False
-
-# 9. 아나그램(딕셔너리)
-# 강의 들을 것! 코드는 이해가 되지만 dict 함수들 사용법 익혀 둘 것!!
-
-# 9.1 아나그램(리스트)
-# 강의 들을 것!
-
-# 10. 최소힙
-# 강의 들을 것! (최소최대 힙 : 패캠 강의다시 들을 것)
-
-# 11. 최대힙
-# 강의 들을 것! (최소최대 힙 : 패캠 강의다시 들을 것)
